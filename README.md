@@ -171,3 +171,11 @@ The Blitz community is warm, safe, diverse, inclusive, and fun! Feel free to rea
 - [Forum discussions](https://github.com/blitz-js/blitz/discussions)
 - [How to Contribute](https://blitzjs.com/docs/contributing)
 - [Sponsor or donate](https://github.com/blitz-js/blitz#sponsors-and-donations)
+
+## Crypto Migration Notes
+
+1. Used thirdweb for one-of-one NFT collection generation + drop
+   i. using typescript sdk to handle server-side inside existing createFuturecast.ts
+2. used https://rinkebyfaucet.com/ for rinkeby currency (eth testnet coins)
+   i. ref: https://portal.thirdweb.com/guides/create-a-metamask-wallet
+3. signed in using google to alchemy to get more rinkeby

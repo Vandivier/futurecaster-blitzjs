@@ -9,6 +9,7 @@ import {
 } from "blitz"
 import LoginForm from "app/auth/components/LoginForm"
 
+// Component is a BlitzPage component, eg pages/index.tsx
 export default function App({ Component, pageProps }: AppProps) {
   const getLayout = Component.getLayout || ((page) => page)
 
