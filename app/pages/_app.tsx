@@ -1,13 +1,14 @@
+import { ChainId, ThirdwebProvider } from "@thirdweb-dev/react"
+import LoginForm from "app/auth/components/LoginForm"
 import {
   AppProps,
-  ErrorBoundary,
-  ErrorComponent,
   AuthenticationError,
   AuthorizationError,
+  ErrorBoundary,
+  ErrorComponent,
   ErrorFallbackProps,
   useQueryErrorResetBoundary,
 } from "blitz"
-import LoginForm from "app/auth/components/LoginForm"
 
 // Component is a BlitzPage component, eg pages/index.tsx
 export default function App({ Component, pageProps }: AppProps) {
@@ -18,7 +19,9 @@ export default function App({ Component, pageProps }: AppProps) {
       FallbackComponent={RootErrorFallback}
       onReset={useQueryErrorResetBoundary().reset}
     >
-      {getLayout(<Component {...pageProps} />)}
+      <ThirdwebProvider desiredChainId={ChainId.Rinkeby}>
+        {getLayout(<Component {...pageProps} />)}
+      </ThirdwebProvider>
     </ErrorBoundary>
   )
 }

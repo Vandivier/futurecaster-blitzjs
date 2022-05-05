@@ -1,3 +1,4 @@
+import { NftCollectionList } from "app/core/components/NftCollectionList"
 import { ReturnHomeButton } from "app/core/components/ReturnHomeButton"
 import Layout from "app/core/layouts/Layout"
 import getFuturecasts from "app/futurecasts/queries/getFuturecasts"
@@ -57,6 +58,8 @@ const FuturecastsPage: BlitzPage = () => {
 
         <Suspense fallback={<div>Loading...</div>}>
           <FuturecastsList />
+          <h2>Futurecast NFT ID List (Rinkeby)</h2>
+          <NftCollectionList />
         </Suspense>
       </div>
     </>
